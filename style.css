@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: scroll;
+}
+.header a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.neon {
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #5735be, 0 0 30px #5735be,
+    0 0 40px #0ff, 0 0 70px #5735be, 0 0 80px #00b8cf, 0 0 100px #5735be,
+    0 0 150px #00b8cf;
+
+  background: linear-gradient(45deg, #5735be, #00b8cf);
+  padding: 2px 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+.hero {
+  justify-content: center;
+}
+.hero .gradient-border {
+  border: 7px solid transparent;
+  border-image: linear-gradient(45deg, #5735be, #00b8cf) 1;
+  border-image-slice: 1;
+  box-shadow: 0 0 20px 5px rgba(87, 53, 190, 0.3),
+    0 0 20px 5px rgba(0, 184, 207, 0.3), 0 0 25px 5px rgba(87, 53, 190, 0.3);
+}
+.wrapper {
+  position: relative; /* Added to position the .card-box relative to the .wrapper */
+}
+.card-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  position: absolute;
+  top: 20rem; /* Adjusts the position to overlap the image by 1.5rem */
+  left: 3rem; /* Adjusts the position to overlap the image by 1.5rem */
+  width: calc(
+    100% + 3rem
+  ); /* Adjusts the width to cover the image and overlap by 1.5rem on each side */
+  height: calc(100% + 3rem);
+  width: 350px;
+  height: 250px;
+  padding: 1rem;
+  border: 7px solid #5735be;
+  background: linear-gradient(
+    45deg,
+    rgba(87, 53, 190, 0.8),
+    rgba(0, 183, 207, 0.8)
+  );
+  backdrop-filter: blur(2px);
+  border-radius: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
+}
+.card-box p {
+  font-size: 16px;
+}
+.card-box h4 {
+  font-size: 16px;
+}
+
+.card-box .profile-image {
+  border: 3px solid #5735be;
+  border-radius: 50%;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 24px;
+}
+.features h2 {
+  color: #5735be;
+  font-weight: 700;
+}
+.features .btn {
+  background-color: #5735be;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: white;
+  width: 60%;
+}
+.features p {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.features .trust {
+  color: #5735be;
+  font-size: 28px !important;
+  font-weight: bold;
+  /* text-align: center; */
+}
+.features .brands {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.uv .uv_printed {
+  text-align: center;
+  height: max-content;
+  width: 100%;
+  background-color: #5735be;
+  color: white;
+}
+.uv .uv_printed h2 {
+  font-size: 3rem;
+}
+.uv .uv_printed p {
+  font-size: 1.2rem;
+}
+.sellers .hed_content {
+  text-align: center;
+  color: black;
+}
+.sellers .hed_content h2 {
+  font-size: 2rem;
+}
+
+.sellers .cardbox {
+  width: 350px;
+  height: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sellers .cardbox .content {
+  border: 2px solid #00b8cf;
+  background-color: aliceblue;
+  width: 95%;
+  position: relative;
+  padding: 0.5rem;
+}
+.sellers .cardbox .content img {
+  width: 100%;
+}
+.sellers .cardbox .content h4 {
+  font-size: 16px;
+}
+.sellers .cardbox .content .badge {
+  background-color: red;
+  padding: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 0px;
+}
+.sellers .cardbox .content .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 0.5rem;
+}
+.hed_content {
+  text-align: center;
+}
+.benifits {
+  background-color: #5735be;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.warranty .wrnty {
+  width: 60%;
+  background-color: #d5eeff;
+  padding: 1rem;
+  box-shadow: 5px 5px 20px 5px #8d8d8d;
+}
+.warranty .wrnty h3 {
+  color: #5735be;
+  font-weight: bold;
+}
+.warranty .wrnty p {
+  font-size: 18px;
+}
+
+.accordion {
+  background-color: #f9f9f9; /* Default background color */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  background: linear-gradient(45deg, #5735be, #00b8cf);
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.accordion-item:hover {
+  background: linear-gradient(45deg, #5735beaf, #00b7cfaf);
+}
+
+.accordion-content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+  margin: 10px 0;
+}
+
+.accordion-item::after {
+  content: "\25B8"; /* Unicode for right arrow */
+  float: right;
+}
+
+.accordion-item.active::after {
+  content: "\25BE"; /* Unicode for down arrow */
+}
+.slider-container .slider .wrapper {
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+.slider-container .slider .wrapper .gradient-border {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+.slider-container .slider .wrapper .card-box {
+  top: 10rem;
+  left: 1.5rem;
+  width: 300px;
+  height: 250px;
+  gap: 0px;
+}
+
+/* Responsive styles for the hero section */
+@media (max-width: 991px) {
+  .slider-container .slider .wrapper {
+    margin-top: 3rem; /* Decrease margin top */
+    margin-bottom: 4rem; /* Decrease margin bottom */
+  }
+  .slider-container .slider .wrapper .gradient-border {
+    width: 250px; /* Adjust image width */
+    height: 250px; /* Adjust image height */
+  }
+  .slider-container .slider .wrapper .card-box {
+    top: 5rem; /* Adjust top position */
+    left: 3rem; /* Adjust left position */
+    width: 150px; /* Adjust card width */
+    height: 200px; /* Adjust card height */
+    border-radius: 10px;
+    border-width: 2px;
+  }
+  .slider-container .slider .wrapper .card-box img {
+    width: 50px;
+  }
+  .slider-container .slider .wrapper .card-box h3 {
+    font-size: 15px;
+  }
+  .slider-container .slider .wrapper .card-box p {
+    font-size: 12px;
+    line-height: 1;
+  }
+  .slider-container .slider .wrapper .card-box h4 {
+    font-size: 10px;
+  }
+  .hero .wrapper .gradient-border {
+    width: 95%;
+    margin: auto;
+  }
+  .col-md-6 {
+    width: 100%; /* Make columns full width on smaller screens */
+    margin-bottom: 2rem; /* Add some space between columns */
+  }
+  .features {
+    padding: 0 1rem; /* Add horizontal padding to features column */
+    text-align: left; /* Center align text */
+  }
+  .card-box {
+    top: 1.5rem; /* Adjust top position */
+    left: -1.5rem; /* Reset left position */
+    width: calc(100% - 2rem); /* Adjust width to fit screen width */
+    height: auto; /* Auto adjust height */
+  }
+  .brands img {
+    width: 90px;
+  }
+  .uv .uv_printed {
+    width: 100%;
+  }
+  .uv .uv_printed h2 {
+    font-size: 2rem;
+  }
+  .working .steps img {
+    width: 150px;
+  }
+  .working .steps p {
+    font-size: 11px;
+  }
+  .working .steps h4 {
+    font-size: 1rem;
+  }
+  .warranty .wrnty {
+    width: 80%;
+  }
+  .warranty .wrnty p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-box {
+    padding: 0.5rem; /* Reduce padding */
+  }
+  .card-box h4,
+  .card-box p {
+    font-size: 14px; /* Reduce font size */
+  }
+  .card-box .profile-image {
+    width: 80px; /* Adjust profile image size */
+    height: 80px;
+  }
+  ul li {
+    font-size: 18px; /* Adjust list item font size */
+  }
+  .slider-container .slider h4 {
+    font-size: 10px !important;
+  }
+  .slider-container .slider h5 {
+    font-size: 5px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-box {
+    width: 70%;
+    top: 6rem;
+    left: 3rem;
+  }
+  .card-box h4,
+  .card-box p {
+    font-size: 12px; /* Further reduce font size */
+  }
+  .card-box .profile-image {
+    width: 60px !important; /* Further adjust profile image size */
+    height: 60px !important;
+  }
+  ul li {
+    font-size: 16px; /* Further adjust list item font size */
+  }
+  .hero .wrapper img {
+    width: 80%;
+    margin: auto;
+  }
+  .features {
+    text-align: left;
+  }
+
+  .brands img {
+    width: 90px;
+  }
+  .uv .uv_printed h2 {
+    font-size: 1.5rem;
+  }
+  .uv .uv_printed p {
+    font-size: 16px;
+  }
+  .uv .uv_printed {
+    padding: 1rem !important;
+  }
+  .benifits .lists li {
+    font-size: 18px;
+  }
+  .benifits .lists ul {
+    margin-bottom: 0;
+  }
+  .slider-container .slider .wrapper .gradient-border {
+    width: 300px; /* Adjust image width */
+    height: 250px; /* Adjust image height */
+    object-fit: fill;
+  }
+  .slider-container .slider .wrapper .card-box {
+    top: 5rem; /* Adjust top position */
+    left: 1.5rem; /* Adjust left position */
+    width: 250px; /* Adjust card width */
+    height: 200px; /* Adjust card height */
+    border-radius: 10px;
+    border-width: 2px;
+  }
+  .slider-container .slider .wrapper .card-box img {
+    width: 80px;
+  }
+  .slider-container .slider .wrapper .card-box h3 {
+    font-size: 25px;
+  }
+  .slider-container .slider .wrapper .card-box p {
+    font-size: 15px;
+    line-height: 1;
+  }
+  .slider-container .slider .wrapper .card-box h4 {
+    font-size: 10px;
+  }
+}

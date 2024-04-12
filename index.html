@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>E-Commerce Site</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <!-- Include Slick Theme CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+        /* Custom styles */
+        .slider-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .cardbox {
+            text-align: center;
+        }
+
+        .slick-prev,
+        .slick-next {
+            font-size: 24px;
+            color: #fff;
+            /* Changed button color to white */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            background-color: #5735BE;
+            /* Changed button background color */
+            border: none;
+            padding: 10px;
+            /* Increased padding for better appearance */
+        }
+
+        .slick-prev {
+            left: -3rem;
+        }
+
+        .slick-next {
+            right: -3rem;
+        }
+
+        .slider-navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .slider-navigation button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 6px solid #00B8CF;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            line-height: 0;
+            background-color: #5735BE;
+            cursor: pointer;
+            font-size: 30px;
+            /* margin: 0 5px; */
+            color: #5735BE;
+            transition: all 0.3s ease;
+            /* Added smooth transition effect */
+        }
+
+        .slider-navigation button:hover {
+            background-color: #00B8CF;
+            /* Change background color on hover */
+            border-color: #5735BE;
+            /* Change border color on hover */
+            color: #fff;
+            /* Change text color on hover */
+        }
+
+        /* Custom CSS for header boxes */
+        .header-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .header-box>div {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .logo-box {
+            background-color: #5735BE;
+            /* Blue */
+        }
+
+        .nav-box {
+            background-color: #00B8CF;
+            /* Green */
+        }
+
+        .nav-box:nth-child(3) {
+            background-color: #5735BE;
+            /* Red */
+        }
+
+        .nav-box:last-child {
+            background-color: #00B8CF;
+            /* Yellow */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .header-box {
+                flex-wrap: wrap;
+            }
+
+            .header-box>div {
+                flex: 1 1 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Remove margin from container-fluid */
+        .container-fluid.header {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col">
+                <div class="header-box">
+                    <!-- Logo Box -->
+                    <div class="logo-box">
+                        <img src="/images/logo.png" alt="Logo" width="120">
+                    </div>
+                    <!-- Navigation Boxes -->
+                    <div class="nav-box">
+                        <a href="#">Custom</a>
+                    </div>
+                    <div class="nav-box">
+                        <a href="#">Neon Print UV</a>
+                    </div>
+                    <div class="nav-box">
+                        <a href="#">Custom</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="heading mt-5">
+        <h1 class="text-center">Get a Free Quote: Turn Your Vision Into a <span class="neon">Neon</span> Reality</h1>
+    </div>
+    <div class="container hero mt-5">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="wrapper">
+                    <img src="/images/hero_img.png" alt="hero banner" width="450" class="gradient-border">
+                    <div class="card-box">
+                        <img src="/images/profile.png" alt="" class="profile-image">
+                        <h3>Gavin I.</h3>
+                        <h4>⭐️⭐️⭐️⭐️⭐️</h4>
+                        <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign
+                            is great</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 features ">
+                <h2>Our Custom Neon Features:</h2>
+                <ul>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; Free Shipping</li>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; 24 Months Warranty</li>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; Hand Crafted Quality</li>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; Energy Efficient</li>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; Safety</li>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; 24/7 Customer Support</li>
+                    <li><img src="/images/Vector.png" alt=""> &nbsp; 15-Seconds Setup</li>
+                </ul>
+                <a href="#" class="btn">Get A Free Quote</a>
+                <p><img src="/images/lock.png" alt="">All transactions secured and encrypted</p>
+                <h3 class="trust">Trusted By</h3>
+                <div class="brands">
+                    <img src="/images/brand1.png" alt="">
+                    <img src="/images/brand2.png" alt="">
+                    <img src="/images/brand3.png" alt="">
+                </div>
+                <div class="brands">
+                    <img src="/images/brand4.png" alt="">
+                    <img src="/images/brand5.png" alt="">
+                    <img src="/images/brand6.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <section class="uv mt-5">
+        <div class="uv_printed p-5">
+            <h2>UV Printed LED <span class="neon">Neon</span> Signs: Your Business Success</h2>
+            <p>Bringing Your Vision to Life with High-Quality UV Printing and Eye-Catching Neon Signage</p>
+        </div>
+    </section>
+
+    <section class="sellers mt-5">
+        <div class="hed_content">
+            <h2>Our Best <span class="neon">Sellers</span></h2>
+            <p>Bringing Your Vision to Life with High-Quality UV <br> Printing and Eye-Catching Neon Signage</p>
+        </div>
+        <div class="slider-container" style="position: relative;">
+            <div class="slider">
+                <div class="cardbox py-2">
+                    <div class="content">
+                        <img src="/images/slide1.png" alt="">
+                        <h4>Patrick's Day With Hat Flag And Money Led Neon Acrylic Artwork</h4>
+                        <div class="price">
+                            <div>
+                                <h5 style="font-size: 15px; color: red;">Sale price from</h5>
+                                <h5 style="font-size: 15px;">Regular price</h5>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 15px;  color: red;">$169.15</h5>
+                                <h5 style="font-size: 15px;"> <strike>$398.00</strike></h5>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            Save 50%
+                        </div>
+                    </div>
+                </div>
+                <div class="cardbox py-2">
+                    <div class="content">
+                        <img src="/images/slide1.png" alt="">
+                        <h4>Patrick's Day With Hat Flag And Money Led Neon Acrylic Artwork</h4>
+                        <div class="price">
+                            <div>
+                                <h5 style="font-size: 15px; color: red;">Sale price from</h5>
+                                <h5 style="font-size: 15px;">Regular price</h5>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 15px;  color: red;">$169.15</h5>
+                                <h5 style="font-size: 15px;"> <strike>$398.00</strike></h5>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            Save 50%
+                        </div>
+                    </div>
+                </div>
+                <div class="cardbox py-2">
+                    <div class="content">
+                        <img src="/images/slide1.png" alt="">
+                        <h4>Patrick's Day With Hat Flag And Money Led Neon Acrylic Artwork</h4>
+                        <div class="price">
+                            <div>
+                                <h5 style="font-size: 15px; color: red;">Sale price from</h5>
+                                <h5 style="font-size: 15px;">Regular price</h5>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 15px;  color: red;">$169.15</h5>
+                                <h5 style="font-size: 15px;"> <strike>$398.00</strike></h5>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            Save 50%
+                        </div>
+                    </div>
+                </div>
+                <div class="cardbox py-2">
+                    <div class="content">
+                        <img src="/images/slide1.png" alt="">
+                        <h4>Patrick's Day With Hat Flag And Money Led Neon Acrylic Artwork</h4>
+                        <div class="price">
+                            <div>
+                                <h5 style="font-size: 15px; color: red;">Sale price from</h5>
+                                <h5 style="font-size: 15px;">Regular price</h5>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 15px;  color: red;">$169.15</h5>
+                                <h5 style="font-size: 15px;"> <strike>$398.00</strike></h5>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            Save 50%
+                        </div>
+                    </div>
+                </div>
+                <div class="cardbox py-2">
+                    <div class="content">
+                        <img src="/images/slide1.png" alt="">
+                        <h4>Patrick's Day With Hat Flag And Money Led Neon Acrylic Artwork</h4>
+                        <div class="price">
+                            <div>
+                                <h5 style="font-size: 15px; color: red;">Sale price from</h5>
+                                <h5 style="font-size: 15px;">Regular price</h5>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 15px;  color: red;">$169.15</h5>
+                                <h5 style="font-size: 15px;"> <strike>$398.00</strike></h5>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            Save 50%
+                        </div>
+                    </div>
+                </div>
+                <div class="cardbox py-2">
+                    <div class="content">
+                        <img src="/images/slide1.png" alt="">
+                        <h4>Patrick's Day With Hat Flag And Money Led Neon Acrylic Artwork</h4>
+                        <div class="price">
+                            <div>
+                                <h5 style="font-size: 15px; color: red;">Sale price from</h5>
+                                <h5 style="font-size: 15px;">Regular price</h5>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 15px;  color: red;">$169.15</h5>
+                                <h5 style="font-size: 15px;"> <strike>$398.00</strike></h5>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            Save 50%
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate the above slide content for multiple slides -->
+                <!-- Duplicate as many times as you want -->
+            </div>
+            <div class="slider-navigation">
+                <button class="slick-prev"></button>
+                <button class="slick-next"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="working mt-5">
+        <div class="hed_content">
+            <h2>How Does It <span class="neon">Works?</span></h2>
+            <p>Bringing Your Vision to Life with High-Quality UV <br> Printing and Eye-Catching Neon Signage</p>
+        </div>
+        <div class="container mt-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-3 steps text-center">
+                    <img src="/images/circle.png" alt="">
+                    <h4 class="mt-3">Show Us Your Idea</h4>
+                    <p>You can upload a picture,<br> drawing or just leave a <br> description. Our designers will <br>
+                        bring it to life.</p>
+                </div>
+                <div class="col-md-3 steps text-center">
+                    <img src="/images/circle (1).png" alt="">
+                    <h4 class="mt-3">Visualize For Free</h4>
+                    <p>Once you like your design,<br> we'll make you a 3D preview <br> of your design so you can <br>
+                        preview it.</p>
+                </div>
+                <div class="col-md-3 steps text-center">
+                    <img src="/images/circle (2).png" alt="">
+                    <h4 class="mt-3">Confirm And Order</h4>
+                    <p>After accepting your design, <br> we'll send you a secure <br> payment link so you can <br>
+                        proceed to order.</p>
+                </div>
+                <div class="col-md-3 steps text-center">
+                    <img src="/images/circle (3).png" alt="">
+                    <h4 class="mt-3">Enjoy Free Shipping</h4>
+                    <p>We'll ship it to you for free in <br> 4-10 business days. If you need <br> it faster, we offer
+                        <br> expedited options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benifits mt-5">
+        <h2 class="text-center">Benefits of Custom <span class="neon">Sellers</span> Logo Neon Signs for Business</h2>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-6 lists d-flex justify-content-center">
+                    <ul>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Boost Your Visibility</li>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Brand Uniqueness</li>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Cost-Effective</li>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Highly Customizable</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 lists d-flex justify-content-center">
+                    <ul>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Brand Reflection</li>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Ideal Placement</li>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Choose Orant Neon</li>
+                        <li><img src="/images/Vector.png" alt=""> &nbsp; Budget-Friendly Options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- missing review -->
+    <div class="slider-container" style="position: relative;">
+        <div class="slider">
+            <div class="wrapper">
+                <img src="/images/feedback1.png" alt="hero banner" width="450" class="gradient-border">
+                <div class="card-box">
+                    <img src="/images/profile.png" alt="" class="profile-image">
+                    <h3>Gavin I.</h3>
+                    <h4>⭐️⭐️⭐️⭐️⭐️</h4>
+                    <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign is
+                        great</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <img src="/images/feedback2.png" alt="hero banner" width="450" class="gradient-border">
+                <div class="card-box">
+                    <img src="/images/profile.png" alt="" class="profile-image">
+                    <h3>Gavin I.</h3>
+                    <h4>⭐️⭐️⭐️⭐️⭐️</h4>
+                    <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign is
+                        great</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <img src="/images/feedback3.png" alt="hero banner" width="450" class="gradient-border">
+                <div class="card-box">
+                    <img src="/images/profile.png" alt="" class="profile-image">
+                    <h3>Gavin I.</h3>
+                    <h4>⭐️⭐️⭐️⭐️⭐️</h4>
+                    <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign is
+                        great</p>
+                </div>
+            </div>
+            <div class="wrapper none">
+                <img src="/images/feedback1.png" alt="hero banner" width="450" class="gradient-border">
+                <div class="card-box">
+                    <img src="/images/profile.png" alt="" class="profile-image">
+                    <h3>Gavin I.</h3>
+                    <h4>⭐️⭐️⭐️⭐️⭐️</h4>
+                    <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign is
+                        great</p>
+                </div>
+            </div>
+            <div class="wrapper none">
+                <img src="/images/feedback2.png" alt="hero banner" width="450" class="gradient-border">
+                <div class="card-box">
+                    <img src="/images/profile.png" alt="" class="profile-image">
+                    <h3>Gavin I.</h3>
+                    <h4>⭐️⭐️⭐️⭐️⭐️</h4>
+                    <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign is
+                        great</p>
+                </div>
+            </div>
+
+            <!-- Duplicate the above slide content for multiple slides -->
+            <!-- Duplicate as many times as you want -->
+        </div>
+        <div class="slider-navigation">
+            <button class="slick-prev"></button>
+            <button class="slick-next"></i></button>
+        </div>
+    </div>
+    <section class="warranty mt-5">
+        <div class="container wrnty text-center">
+            <img src="/images/sticker.png" alt="">
+            <h3>2-Years Warranty</h3>
+            <p>Oran Neon's UV Printed LED Neon Signs bring together modern tech and classic charm. <br> These signs
+                shine bright with vivid colors and intricate designs, thanks to UV printing. <br> They're durable,
+                energy-efficient, and perfect for businesses, events, or personal spaces. <br> Illuminate your world
+                with style and flair, courtesy of Oran Neon's UV Printed LED Neon Signs.</p>
+        </div>
+    </section>
+
+    <section class="faqs mt-5">
+        <h2 class="text-center mb-5 mt-5">Frequently Asked <span class="neon">Questions</span></h2>
+        <div class="container">
+            <div class="accordion">
+                <div class="accordion-item" onclick="toggleAccordion(this)">What is a neon shop and what do we
+                    specialize in?</div>
+                <div class="accordion-content">
+                    <p>This is the content for Accordion Item 1.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item" onclick="toggleAccordion(this)">How much is a neon light cost?</div>
+                <div class="accordion-content">
+                    <p>This is the content for Accordion Item 2.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item" onclick="toggleAccordion(this)">Can I customize the design of my neon sign?
+                </div>
+                <div class="accordion-content">
+                    <p>This is the content for Accordion Item 2.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item" onclick="toggleAccordion(this)">Which is better LED or Glass neon?</div>
+                <div class="accordion-content">
+                    <p>This is the content for Accordion Item 2.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item" onclick="toggleAccordion(this)">Do neon signs consume a lot of energy?</div>
+                <div class="accordion-content">
+                    <p>This is the content for Accordion Item 2.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function toggleAccordion(accordionItem) {
+            accordionItem.classList.toggle('active');
+            var content = accordionItem.nextElementSibling;
+            if (accordionItem.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = 0;
+            }
+        }
+        // Initialize Slick slider
+        $(document).ready(function () {
+    $('.slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next'),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1, /* Show 1 slide per view on tablets */
+                    slidesToScroll: 1 /* Also scroll 1 slide at a time on tablets */
+                }
+            },
+            {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 1, /* Show 1 slide per view on smaller screens */
+                    slidesToScroll: 1 /* Also scroll 1 slide at a time on smaller screens */
+                }
+            }
+        ]
+    });
+});
+
+    </script>
+    </section>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
