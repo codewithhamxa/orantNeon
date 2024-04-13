@@ -382,6 +382,12 @@ ul li {
     width: 60px !important; /* Further adjust profile image size */
     height: 60px !important;
   }
+  .features {
+    margin-top: 2rem !important;
+  }
+  .margin_adjust {
+    margin-left: -2rem !important;
+  }
   ul li {
     font-size: 16px; /* Further adjust list item font size */
   }
@@ -436,5 +442,11 @@ ul li {
   }
   .slider-container .slider .wrapper .card-box h4 {
     font-size: 10px;
+  }
+  .accordion {
+    width: 90%;
+  }
+  .accordion-item {
+    font-size: 12px;
   }
 }
