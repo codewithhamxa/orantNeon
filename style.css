@@ -100,6 +100,14 @@ ul li {
   color: white;
   width: 60%;
 }
+.features .btn:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(87, 53, 190, 0.8),
+    rgba(0, 183, 207, 0.8)
+  );
+  color: white;
+}
 .features p {
   margin-top: 0.5rem;
   display: flex;
@@ -203,18 +211,22 @@ ul li {
 }
 
 .accordion {
+  width: 60%;
+  margin: auto;
   background-color: #f9f9f9; /* Default background color */
-  border-radius: 5px;
+  border-radius: 30px;
   margin-bottom: 10px;
   overflow: hidden;
+  border: 2px solid #5735be;
 }
 
 .accordion-item {
   background: linear-gradient(45deg, #5735be, #00b8cf);
   color: #fff;
+  font-size: 18px;
   cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 30px;
   transition: background 0.3s ease;
 }
 
