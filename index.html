@@ -835,6 +835,7 @@
             </div>
 
         </div>
+    </section>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -850,6 +851,24 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+        function toggleAccordion(accordionItem) {
+    accordionItem.classList.toggle('active');
+    var accordionContent = accordionItem.nextElementSibling;
+    if (accordionContent.style.maxHeight) {
+        accordionContent.style.maxHeight = null;
+    } else {
+        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    }
+}
+
+// Initially, collapse all accordion items
+var accordions = document.querySelectorAll('.accordion-item');
+accordions.forEach(function(item) {
+    item.classList.remove('active');
+    var content = item.nextElementSibling;
+    content.style.maxHeight = null;
+});
+
         document.addEventListener('DOMContentLoaded', () => {
     const cardSlider1 = document.querySelector('.container-fluid.my-5 .card-slider');
     const prevButton1 = document.getElementById('prev-btn');
