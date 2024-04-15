@@ -18,7 +18,7 @@ body {
 .header a:hover {
   color: white;
 }
-.neon {
+/* .neon {
   font-family: "Hurricane", cursive;
   font-weight: 400;
   font-style: normal;
@@ -31,7 +31,95 @@ body {
   padding: 2px 10px;
   border-radius: 8px;
   display: inline-block;
+} */
+.neon {
+  padding: 0px 7px;
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  background: -webkit-linear-gradient(
+    -86deg,
+    #5735be 5%,
+    #5735be 53%,
+    #00b8cf 91%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+  color: white;
+  text-shadow: 0 0 10px #5735be, 0 0 20px #5735be, 0 0 30px #00b8cf,
+    0 0 40px #00b8cf, 0 0 50px #00b8cf, 0 0 60px #00b8cf, 0 0 70px #00b8cf;
+  position: relative;
 }
+
+.neon::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(to right, #5735be, #00b8cf);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: gradientAnimation 2s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+.neon2 {
+  font-size: 4rem;
+  margin: 3rem 0;
+  padding: 1rem;
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  background: -webkit-linear-gradient(
+    -86deg,
+    #5735be 5%,
+    #5735be 53%,
+    #00b8cf 91%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+  color: white;
+  text-shadow: 0 0 10px #5735be, 0 0 20px #5735be, 0 0 30px #00b8cf,
+    0 0 40px #00b8cf, 0 0 50px #00b8cf, 0 0 60px #00b8cf, 0 0 70px #00b8cf;
+  position: relative;
+}
+
+.neon::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, #5735be, #00b8cf);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: gradientAnimation 2s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .hero {
   justify-content: center;
 }
@@ -151,7 +239,7 @@ ul li {
   font-size: 2rem;
 }
 
-.sellers .cardbox {
+/* .sellers .cardbox {
   width: 350px;
   height: max-content;
 
@@ -188,6 +276,127 @@ ul li {
   justify-content: space-between;
   text-align: left;
   padding: 0.5rem;
+} */
+.card-slider {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+  /* Occupy full width */
+  scroll-snap-type: x mandatory;
+}
+
+.card-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.cardbox {
+  flex: 0 0 auto;
+  /* Allow flexibility */
+  width: calc(25% - 1rem);
+  /* Width of each card including margin */
+  margin-right: 1rem;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.cardbox:last-child {
+  margin-right: 0;
+}
+
+.cardbox .content {
+  border: 2px solid #00b8cf;
+  background-color: aliceblue;
+  width: 95%;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.cardbox .content img {
+  width: 100%;
+}
+
+.cardbox .content h4 {
+  font-size: 15px;
+}
+
+.cardbox .content .badge {
+  background-color: red;
+  padding: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 0px;
+}
+
+.cardbox .content .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.controls-container {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  display: flex;
+  align-items: center;
+}
+.carousel-control-prev-icon {
+  position: absolute;
+  left: 780px;
+}
+.carousel-control-next-icon {
+  position: absolute;
+  right: 780px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white;
+  border-radius: 50%;
+  border: 4px solid #00b8cf;
+  padding: 20px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 991px) {
+  .cardbox {
+    width: calc(33.333% - 1rem);
+    /* Display three slides on tablets */
+  }
+}
+
+@media (max-width: 767px) {
+  .cardbox {
+    width: calc(100% - 1rem);
+    /* Display one slide on mobile */
+  }
+
+  .controls-container {
+    margin-top: 1rem;
+    /* Adjust margin-top for better spacing on mobile */
+  }
 }
 .hed_content {
   text-align: center;
@@ -293,6 +502,14 @@ ul li {
 
 /* Responsive styles for the hero section */
 @media (max-width: 991px) {
+  .carousel-control-prev-icon {
+    position: absolute !important;
+    left: 100px !important;
+  }
+  .carousel-control-next-icon {
+    position: absolute !important;
+    right: 100px !important;
+  }
   .slider-container .slider .wrapper {
     margin-top: 3rem; /* Decrease margin top */
     margin-bottom: 4rem; /* Decrease margin bottom */
@@ -390,6 +607,16 @@ ul li {
 }
 
 @media (max-width: 575px) {
+  .carousel-control-prev-icon {
+    margin-top: 1rem;
+    position: absolute;
+    left: 120px;
+  }
+  .carousel-control-next-icon {
+    margin-top: 1rem;
+    position: absolute;
+    right: 120px;
+  }
   .card-box {
     width: 70%;
     top: 6rem;
