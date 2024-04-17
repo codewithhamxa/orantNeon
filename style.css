@@ -150,12 +150,9 @@ body {
   height: 250px;
   padding: 1rem;
   border: 7px solid #5735be;
-  background: linear-gradient(
-    45deg,
-    rgba(87, 53, 190, 0.8),
-    rgba(0, 183, 207, 0.8)
-  );
-  backdrop-filter: blur(2px);
+  background: linear-gradient(to right, #5735be77, #00b7cf8f);
+  /* Same gradient background */
+  backdrop-filter: blur(100px);
   border-radius: 25px;
   box-sizing: border-box;
   overflow: hidden;
@@ -163,6 +160,9 @@ body {
 }
 .card-box p {
   font-size: 16px;
+}
+.card-box h3{
+  color: #fff;
 }
 .card-box h4 {
   font-size: 16px;
@@ -239,44 +239,6 @@ ul li {
   font-size: 2rem;
 }
 
-/* .sellers .cardbox {
-  width: 350px;
-  height: max-content;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.sellers .cardbox .content {
-  border: 2px solid #00b8cf;
-  background-color: aliceblue;
-  width: 95%;
-  position: relative;
-  padding: 0.5rem;
-}
-.sellers .cardbox .content img {
-  width: 100%;
-}
-.sellers .cardbox .content h4 {
-  font-size: 16px;
-}
-.sellers .cardbox .content .badge {
-  background-color: red;
-  padding: 10px;
-  font-weight: bold;
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  border-radius: 0px;
-}
-.sellers .cardbox .content .price {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  padding: 0.5rem;
-} */
 .card-slider {
   position: relative;
   display: flex;
@@ -363,11 +325,11 @@ ul li {
 }
 .carousel-control-prev-icon {
   position: absolute;
-  left: 780px;
+  left: 680px;
 }
 .carousel-control-next-icon {
   position: absolute;
-  right: 780px;
+  right: 680px;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -498,6 +460,9 @@ ul li {
   width: 300px;
   height: 250px;
   gap: 0px;
+  background: linear-gradient(to right, #5735be77, #00b7cf8f) !important;
+  /* Same gradient background */
+  backdrop-filter: blur(100px) !important;
 }
 
 /* Responsive styles for the hero section */
