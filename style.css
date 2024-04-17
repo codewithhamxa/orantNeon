@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-x:hidden !important; /* Hide horizontal overflow */
   overflow-y: scroll;
 }
 .header a {
