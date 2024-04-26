@@ -262,7 +262,7 @@
 <body>
     <div class="container-fluid header">
         <div class="row">
-            <div class="col">
+            <div class="col" style="padding: 0px !important;">
                 <div class="header-box">
                     <!-- Logo Box -->
                     <div class="logo-box">
@@ -287,28 +287,24 @@
     </div>
     <div class="container hero mt-5">
         <div class="row">
-            <div class="col-md-6 d-flex justify-content-center">
+            <div class="col-md-6 d-flex justify-content-center" style="padding: 0px !important;">
                 <div class="wrapper">
                     <img src="images/hero_img.png" alt="hero banner" width="450" class="gradient-border">
-                    <div class="card-box">
-                        <img src="images/profile.png" alt="" class="profile-image">
-                        <h3>Gavin I.</h3>
-                        <h4>⭐️⭐️⭐️⭐️⭐️</h4>
-                        <p class="text-center">Absolutely amazing sign. Everything was easy to put together and the sign
-                            is great</p>
-                    </div>
                 </div>
             </div>
             <div class="col-md-6 features ">
                 <h2>Our Custom Neon Features:</h2>
                 <ul>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; Free Shipping</li>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; 24 Months Warranty</li>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; Hand Crafted Quality</li>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; Energy Efficient</li>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; Safety</li>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; 24/7 Customer Support</li>
-                    <li><img src="images/Vector.png" alt=""> &nbsp; 15-Seconds Setup</li>
+                    <div>
+                        <li><img src="images/Vector.png" alt=""> &nbsp; Free Shipping</li>
+                        <li><img src="images/Vector.png" alt=""> &nbsp; 24 Months Warranty</li>
+                        <li><img src="images/Vector.png" alt=""> &nbsp; Hand Crafted Quality</li>
+                    </div>
+                    <div>
+                        <li><img src="images/Vector.png" alt=""> &nbsp; Energy Efficient</li>
+                        <li><img src="images/Vector.png" alt=""> &nbsp; 24/7 Customer Support</li>
+                        <li><img src="images/Vector.png" alt=""> &nbsp; 15-Seconds Setup</li>
+                    </div>
                 </ul>
                 <a href="#" class="btn">Get A Free Quote</a>
                 <p><img src="images/lock.png" alt="">All transactions secured and encrypted</p>
@@ -677,9 +673,9 @@
         <div class="container wrnty text-center">
             <img src="images/sticker.png" alt="">
             <h3>2-Years Warranty</h3>
-            <p>Oran Neon's UV Printed LED Neon Signs bring together modern tech and classic charm. <br> These signs
-                shine bright with vivid colors and intricate designs, thanks to UV printing. <br> They're durable,
-                energy-efficient, and perfect for businesses, events, or personal spaces. <br> Illuminate your world
+            <p>Oran Neon's UV Printed LED Neon Signs bring together modern tech and classic charm. These signs
+                shine bright with vivid colors and intricate designs, thanks to UV printing. They're durable,
+                energy-efficient, and perfect for businesses, events, or personal spaces. Illuminate your world
                 with style and flair, courtesy of Oran Neon's UV Printed LED Neon Signs.</p>
             <a href="#" class="btn">Get A Free Quote</a>
         </div>
@@ -805,6 +801,7 @@
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 dots: true,
+                arrows: false,
                 focusOnSelect: true,
                 responsive: [
                     {

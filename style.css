@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x:hidden !important; /* Hide horizontal overflow */
+  overflow-x: hidden !important; /* Hide horizontal overflow */
   overflow-y: scroll;
 }
 .header a {
@@ -203,7 +203,7 @@ ul li {
   margin-top: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 1rem;
 }
 .features .trust {
@@ -456,7 +456,7 @@ ul li {
   object-fit: contain;
 }
 .slider-container .slider .wrapper .card-box {
-  top: 10rem;
+  top: 6rem;
   left: 1.5rem;
   width: 300px;
   height: 250px;
@@ -550,6 +550,10 @@ ul li {
 }
 
 @media (max-width: 767px) {
+  body {
+    overflow-x: hidden !important;
+}
+
   .card-box {
     padding: 0.5rem; /* Reduce padding */
   }
@@ -573,6 +577,25 @@ ul li {
 }
 
 @media (max-width: 575px) {
+  html {
+    overflow-x: hidden !important;
+}
+  .features ul li {
+    font-size: 12px;
+  }
+  .features ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .features .btn {
+    display: block;
+    margin: auto;
+  }
+  .features p {
+    text-align: center;
+  }
   .carousel-control-prev-icon {
     margin-top: 1rem;
     position: absolute;
@@ -584,9 +607,7 @@ ul li {
     right: 120px;
   }
   .card-box {
-    width: 70%;
-    top: 6rem;
-    left: 3rem;
+    display: none;
   }
   .card-box h4,
   .card-box p {
@@ -597,7 +618,8 @@ ul li {
     height: 60px !important;
   }
   .features {
-    margin-top: 2rem !important;
+    margin-top: -2rem !important;
+    text-align: left;
   }
   .margin_adjust {
     margin-left: -2rem !important;
@@ -606,11 +628,9 @@ ul li {
     font-size: 16px; /* Further adjust list item font size */
   }
   .hero .wrapper img {
-    width: 80%;
+    width: 90% !important;
     margin: auto;
-  }
-  .features {
-    text-align: left;
+    display: block;
   }
 
   .brands img {
@@ -636,14 +656,7 @@ ul li {
     height: 250px; /* Adjust image height */
     object-fit: fill;
   }
-  .slider-container .slider .wrapper .card-box {
-    top: 5rem; /* Adjust top position */
-    left: 1.5rem; /* Adjust left position */
-    width: 250px; /* Adjust card width */
-    height: 200px; /* Adjust card height */
-    border-radius: 10px;
-    border-width: 2px;
-  }
+
   .slider-container .slider .wrapper .card-box img {
     width: 80px;
   }
