@@ -583,15 +583,22 @@ ul li {
   .features ul li {
     font-size: 12px;
   }
+  .card-slider .cardbox{
+    margin-right: 0px;
+  }
   .features ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
+    margin-left: -2rem;
   }
   .features .btn {
     display: block;
     margin: auto;
+  }
+  .features h2{
+    text-align: center;
   }
   .features p {
     text-align: center;
