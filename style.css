@@ -203,7 +203,7 @@ ul li {
   margin-top: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
 }
 .features .trust {
