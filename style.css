@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.cardbox a{
+  text-decoration: none;
+  color: #00b8cf;
+  font-weight: bold;
+}
 body {
   overflow-x: hidden !important; /* Hide horizontal overflow */
   overflow-y: scroll;
